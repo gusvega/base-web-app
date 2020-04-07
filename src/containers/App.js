@@ -6,6 +6,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
+import Header from '../components/Header';
 
 // parameter state comes from index.js provider store state(rootReducers)
 const mapStateToProps = (state) => {
@@ -37,7 +38,7 @@ class App extends Component {
     })
     return (
       <div className='tc'>
-        <h1 className='f1'>Users</h1>
+        <Header></Header>
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           { isPending ? <h1>Loading...</h1> :
