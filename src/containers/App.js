@@ -5,7 +5,11 @@ import { setSearchField, requestRobots } from '../actions';
 import MainPage from '../components/MainPage'
 
 const mapStateToProps = (state) => {
+
+  console.log('REACT_APP_SAY_HI------', process.env.REACT_APP_SAY_HI);
+
   return {
+  
     searchField: state.searchRobots.searchField,
     robots: state.requestRobots.robots,
     isPending: state.requestRobots.isPending
@@ -20,6 +24,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
+  
   render() {
     return <MainPage {...this.props}/>
   }
